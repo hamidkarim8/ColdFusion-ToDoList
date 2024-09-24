@@ -1,7 +1,3 @@
-
-<cfquery name="delete">
-  delete from tasks 
-  where id = <cfqueryparam value = "#url.id#" CFSQLType = "cf_sql_integer">
-</cfquery>
-
-<cflocation url = "index.cfm" addToken="no">
+<cfinvoke component="components.tasks" method="deleteTasks" returnvariable="result">
+  <cfinvokeargument name="id" value="#url.id#">
+</cfinvoke>

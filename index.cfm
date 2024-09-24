@@ -15,8 +15,12 @@
 
   <cfoutput>Total: #allTasks.recordCount#</cfoutput>
 
+  <hr/>
+
   <cfif allTasks.recordCount EQ 0>
-      <cfoutput>No tasks found.</cfoutput>
+      <cfoutput>
+        No tasks found.
+      </cfoutput>
   </cfif>
 
   <div class="row mt-4">

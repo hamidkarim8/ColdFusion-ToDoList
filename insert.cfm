@@ -1,10 +1,4 @@
-<cfquery name="insert">
-  insert into tasks 
-  (name)
-  values
-  (
-    <cfqueryparam value="#form.name#" cfsqltype="cf_sql_varchar">
-  )
-</cfquery>
-
-<cflocation url = "index.cfm" addToken="no">
+<cfinvoke component="components.tasks" method="insertTasks" 
+           returnvariable="result">
+    <cfinvokeargument name="form" value="#form#">
+</cfinvoke>
