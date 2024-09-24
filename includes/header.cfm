@@ -14,7 +14,6 @@
     <style>
       body {
         background-color: #f5f3ef; /* Neutral base color */
-        background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/wood-pattern.png'); /* Wooden pattern background */
         background-size: cover;
         background-attachment: fixed;
         color: #333;
