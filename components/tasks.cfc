@@ -71,7 +71,23 @@
     </cftry>
     </cffunction>
 
-                            
+    <!---read name--->
+    <cffunction name="retrieveName">
+        <cfargument name="id" type="string" required="true">
+        <cftry>
+            <cfquery name="getName" returntype="query" datasource="CFToDoList">
+                select id,name
+                from tasks
+                where id = <cfqueryparam value = "#arguments.id#" CFSQLType = "cf_sql_integer">
+            </cfquery>
+                        
+            <cfreturn getName>
+            <cfcatch>
+                <cfoutput>Error: #cfcatch.message#</cfoutput>
+                <cfreturn "" />
+            </cfcatch>
+        </cftry>
+    </cffunction>    
     
 
 </cfcomponent>
