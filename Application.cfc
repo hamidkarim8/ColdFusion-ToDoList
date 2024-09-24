@@ -13,8 +13,8 @@ component{
   function onSessionEnd( struct sessionScope, struct applicationScope ) {}
 
   function onRequestStart( string targetPage ) {
-    request.pageTitle = "Home";
-    request.appTitle = "To Do List";    
+    request.pageTitle = "To Do List";
+    request.appTitle = "Stay organized and productive";    
   }
   function onRequest( string targetPage ) {
     include arguments.targetPage;
